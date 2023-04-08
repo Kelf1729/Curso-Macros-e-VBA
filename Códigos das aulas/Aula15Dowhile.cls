@@ -9,29 +9,29 @@ Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = True
 Private Sub CommandButton1_Click()
 'Soma de valores da planilha
-'Dimens„o de vari·veis
+'Dimens√£o de vari√°veis
 Dim resultado   As Long
 Dim w           As Worksheet
 
 'definir planilha
 Set w = Sheets("Plan1")
-resultado = 0 'Zerando o valor para mais de uma execuÁ„o
+resultado = 0 'Zerando o valor para mais de uma execu√ß√£o
 
 w.Select 'Selecionando a planilha
-w.Range("a1").Select 'Selecionando a cÈlula da planilha
+w.Range("a1").Select 'Selecionando a c√©lula da planilha
 
-'Estrutura de repetiÁ„o
+      'Estrutura de repeti√ß√£o, onde a a√ß√£o √© interrompida somente quando uma condi√ß√£o √© satisfeita 
 Do While ActiveCell.Value <> ""
-'Colocar a aÁ„o de repetiÁ„o
+'Colocar a a√ß√£o de repeti√ß√£o
     'Resultado
     '------------------------
     
-    resultado = resultado + ActiveCell.Value 'somando os valores de cÈlulas ativas
-    ActiveCell.Offset(1, 0).Select 'Deslocando a cÈlula ativa para baixo
+    resultado = resultado + ActiveCell.Value 'somando os valores de c√©lulas ativas
+    ActiveCell.Offset(1, 0).Select 'Deslocando a c√©lula ativa para baixo
 
 Loop
 
-'SaÌda de somatÛrio
-MsgBox "O somatÛrio È : " & resultado
+'Sa√≠da de somat√≥rio
+MsgBox "O somat√≥rio √© : " & resultado
 
 End Sub
