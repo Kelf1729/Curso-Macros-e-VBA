@@ -8,26 +8,26 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = True
 Private Sub bt_executar1_Click()
-'Definir vari·veis
+'Definir vari√°veis
 Dim w           As Worksheet
 Dim resultado   As Long
 
-'Inicializando vari·veis
+'Inicializando vari√°veis
 Set w = Sheets("Plan1")
 resultado = 0
 
 'Selecionar elementos
 w.Select
-w.Range("a2").Select 'Selecionando a cÈlula A2
+w.Range("a2").Select 'Selecionando a c√©lula A2
 
-'Estrutura de loop para percorrer cÈlulas
+'Estrutura de loop para percorrer c√©lulas
 Do While ActiveCell.Value <> ""
     'Somando apenas valores positivos com if then
-    If ActiveCell.Value > 0 Then
+        If ActiveCell.Value > 0 Then'Estrutura condicional if ... then 
         resultado = resultado + ActiveCell.Value
         ActiveCell.Offset(0, 1).Value = 1 'Veriricar os positivos
     End If
-    ActiveCell.Offset(1, 0).Select 'Desce para a prÛxima linha
+    ActiveCell.Offset(1, 0).Select 'Desce para a pr√≥xima linha
 Loop
 
 MsgBox resultado
