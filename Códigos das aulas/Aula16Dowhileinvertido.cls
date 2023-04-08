@@ -9,7 +9,7 @@ Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = True
 Private Sub CommandButton1_Click()
 
-'Declarando variáveis
+'Declarando variÃ¡veis
 Dim w           As Worksheet
 Dim ultcell     As Range
 Dim resultado   As Long
@@ -18,17 +18,17 @@ Dim resultado   As Long
 'inicializando elas
 Set w = Sheets("Plan1")
 
-'última célula
+'Ãºltima cÃ©lula
 Set ultcell = w.Range("a1048576").End(xlUp)
 ultcell.Select
 
-'Subindo as células
+  'Subindo as cÃ©lulas, uso do do while com inversÃ£o de baixo para cima 
 Do While ActiveCell.Row >= 2
     resultado = resultado + ActiveCell.Value 'Somando
     ActiveCell.Offset(-1, 0).Select 'Subindo as linhas
 Loop
 
 'Resultado
-MsgBox "A soma dos valores é :" & resultado
+MsgBox "A soma dos valores Ã© :" & resultado
 
 End Sub
