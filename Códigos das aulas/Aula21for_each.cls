@@ -8,21 +8,21 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = True
 Private Sub bt_executar1_Click()
-'Definindo vari·veis
+'Definindo vari√°veis
 Dim count           As Integer
 
-'Declarando n˙mero de planilhas
+'Declarando n√∫mero de planilhas
 count = Sheets.count
 
 For Each planilhas In Sheets 'Para cada planilha das planilhas
-'O prÛprio VBA cria a vari·vel Planilhas
-    planilhas.Protect Password:="123" 'Criando uma proteÁ„o em cada planilha com senha 123
+'O pr√≥prio VBA cria a vari√°vel Planilhas
+    planilhas.Protect Password:="123" 'Criando uma prote√ß√£o em cada planilha com senha 123
 Next
 End Sub
 
 Private Sub bt_executar2_Click()
 For Each planilha In Sheets
-    'tirando proteÁ„o das planilhas
+    'tirando prote√ß√£o das planilhas
     planilha.Unprotect Password:="123"
 Next
 End Sub
