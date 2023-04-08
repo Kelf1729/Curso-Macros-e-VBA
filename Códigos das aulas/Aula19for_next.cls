@@ -9,7 +9,7 @@ Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = True
 Private Sub bt_executar1_Click()
 
-'Definindo vari·veis
+'Definindo vari√°veis
 Dim w           As Worksheet
 Dim count       As Integer
 
@@ -20,9 +20,9 @@ Set w = Sheets("Plan1")
 w.Select
 w.Range("a1").Select
 
-'Estrutura de repetiÁ„o com inicio e parada
-For count = 1 To 20 'repetiÁ„o comeÁando de 1 indo atÈ 20 contador fixo
-'Colocar a repetiÁ„o do procedimento
+'Estrutura de repeti√ß√£o com inicio e parada
+For count = 1 To 20 'repeti√ß√£o come√ßando de 1 indo at√© 20 contador fixo
+'Colocar a repeti√ß√£o do procedimento
     ActiveCell.Value = count
     ActiveCell.Offset(1, 0).Select
 Next
