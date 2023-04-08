@@ -8,11 +8,11 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = True
 Private Sub bt_executar1_Click()
-'Declarando variáveis
+'Declarando variÃ¡veis
 Dim w           As Worksheet
 Dim resultado   As Long
 
-'Inicializando variável
+'Inicializando variÃ¡vel
 Set w = Sheets("Plan1")
 resultado = 0
 
@@ -20,18 +20,18 @@ resultado = 0
 w.Select
 w.Range("a2").Select
 
-'Estrutura de repetição
+      'Estrutura de repetiÃ§Ã£o, onde a aÃ§Ã£o Ã© repetida atÃ© uma condiÃ§Ã£o ser satisfeita
 Do Until resultado >= 4000
     resultado = resultado + ActiveCell.Value
     ActiveCell.Offset(1, 0).Select
 Loop
 
-'Estrutura de repetição para chegar na última célula
+'Estrutura de repetiÃ§Ã£o para chegar na Ãºltima cÃ©lula
 Do While ActiveCell.Value <> ""
     ActiveCell.Offset(1, 0).Select
 Loop
 
-'Colocando o resultado na célula final
-ActiveCell.Value = "Célula final" & resultado
+'Colocando o resultado na cÃ©lula final
+ActiveCell.Value = "CÃ©lula final" & resultado
 
 End Sub
